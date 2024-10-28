@@ -112,11 +112,13 @@
     <script>
       
       const loadStudents = () => {
+        localStorage.removeItem("attendanceData")
         const data = JSON.parse(localStorage.getItem("attendanceData")) || [
           {
             mssv: "PH55921 ",
             class: "HM 19201",
             name: "Phạm Đăng Khoa",
+            img:'./img/pdk.jpg',
             note: "",
             status: false
           },
@@ -124,6 +126,7 @@
             mssv: "PH47968",
             class: "HM 19201",
             name: "Trần Đình Việt",
+            img:'./img/tdv.png  ',
             note: "",
             status: false
           },
@@ -131,6 +134,7 @@
             mssv: "PH51480",
             class: "HM 19201",
             name: "Hoàng Phương Thảo",
+            img:'./img/hpt.jpg',
             note: "",
             status: false
           },
@@ -138,6 +142,7 @@
             mssv: "PH51695",
             class: "HM 19201",
             name: "Kiểu Thị Khánh Linh",
+            img:'./img/ktkl.jpg',
             status: false,
             note:""
           },
@@ -155,7 +160,7 @@
                         <td>${student.class}</td>
                         <td>${student.mssv}</td>
                         <td>${student.name}</td>
-                        <td><img src="" alt="Avatar" class="img-thumbnail"></td>
+                        <td><img src="${student.img}" width="50%" alt="Avatar" class="img-thumbnail"></td>
                         <td>
                             <div class="toggle-button ${
                               isAttended ? "" : "active"
