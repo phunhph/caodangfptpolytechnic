@@ -91,7 +91,7 @@
               <th>Tên Lớp</th>
               <th>Mã Sinh Viên</th>
               <th>Tên Sinh viên</th>
-              <th>Ảnh</th>
+              <th style="width: 10%">Ảnh</th>
               <th style="width: 20%">Trạng thái</th>
               <th style="width: 30%">Ghi chú</th>
             </tr>
@@ -160,7 +160,7 @@
                         <td>${student.class}</td>
                         <td>${student.mssv}</td>
                         <td>${student.name}</td>
-                        <td><img src="${student.img}" width="50%" alt="Avatar" class="img-thumbnail"></td>
+                        <td><img src="${student.img}" width="100%" alt="Avatar" class="img-thumbnail"></td>
                         <td>
                             <div class="toggle-button ${
                               isAttended ? "" : "active"
